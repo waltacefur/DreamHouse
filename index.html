@@ -446,7 +446,7 @@ Open up Photobooth, or whatever webcam photo app you have on this decrepit machi
 You&#39;ve discovered the secret door behind Sarah&#39;s bookshelf! Let&#39;s see [[where it leads-&gt;Ace&#39;s Room]].
 
 (In case you were wondering, this truly exists in our house.)</tw-passagedata><tw-passagedata pid="25" name="Sarah" tags="" position="1000,1200" size="100,100">(set: $sarah to 1)
-&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/pYhs15XlL-Q?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/Bi5P0Bs6a_I?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 [[Continue-&gt;Sarah&#39;s Room]].</tw-passagedata><tw-passagedata pid="26" name="Ace" tags="" position="1500,1700" size="100,100">&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/2MzrN2xNkeA?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -551,7 +551,7 @@ Posters of Eastern European filmmakers hang on the wall. You notice that each la
 A single book sticks out past the edge of Sarah&#39;s bookshelf. [[Inspect it-&gt;Secret Passage2]].
 
 Sarah sits at the desk playing Runescape.
-Exit to the back to [[hallway-&gt;Hallway2]].</tw-passagedata><tw-passagedata pid="42" name="Bathroom2" tags="" position="2500,1300" size="100,100">BATHROOM
+Exit to the back to [[hallway-&gt;Hallway2]].</tw-passagedata><tw-passagedata pid="42" name="Bathroom2" tags="bathroom" position="2500,1300" size="100,100">BATHROOM
 
 One wall is covered entirely by a mirror. The other has a sink above which hangs a picture of Talking Heads playing at CBGB. Potted plants rest on the edge of the bathtub. Ivies are suspended from above.
 
@@ -608,9 +608,9 @@ Exit to the [[front door-&gt;Front Porch2]].</tw-passagedata><tw-passagedata pid
 
 (if: $mirror is 1)[At the bottom of the page, scralled in red letters are the words &quot;(colour: red)[(text-style: &quot;shudder&quot;)[COME FIND ME]]&quot;
 
-[[Back-&gt;Living Room3]].]
+[[Back-&gt;Living Room3]].
 
-(if: $mirror is 0)[[[Back-&gt;Living Room2]].]</tw-passagedata><tw-passagedata pid="50" name="Front Porch2" tags="frontporch" position="1900,1000" size="100,100">FRONT PORCH (&lt;a href=&quot;https://hangouts.google.com/call/7spmzyjhf4zu1u-uDAh2ACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
+](if: $mirror is 0)[[[Back-&gt;Living Room2]].]</tw-passagedata><tw-passagedata pid="50" name="Front Porch2" tags="frontporch" position="1900,1000" size="100,100">FRONT PORCH (&lt;a href=&quot;https://hangouts.google.com/call/7spmzyjhf4zu1u-uDAh2ACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 A porch glider swings lightly in the breeze. Its metal chains creak quietly. The purple light from inside the house is so inviting.
 
@@ -636,7 +636,7 @@ You enter a tight, chilly pantry filled with bottles and jars of who-knows-what.
 
 You decide not to interact with this yet.
 
-Return to the [[sun room-&gt;Sun Room2]].</tw-passagedata><tw-passagedata pid="55" name="Bathroom3" tags="" position="2500,2500" size="100,100">BATHROOM
+Return to the [[sun room-&gt;Sun Room2]].</tw-passagedata><tw-passagedata pid="55" name="Bathroom3" tags="bathroom" position="2500,2500" size="100,100">BATHROOM
 
 One wall is covered entirely by a mirror. The other has a sink above which hangs a picture of Talking Heads playing at CBGB. Potted plants rest on the edge of the bathtub. Ivies are suspended from above.
 
@@ -748,13 +748,15 @@ You read a book once about how vinyl records have theraputic qualities that digi
 
 (Become a DJ and add something to the queue. You must have a Spotify account, unfortunately.)
 
-[[Back-&gt;Living Room3]].</tw-passagedata><tw-passagedata pid="70" name="Book3" tags="book" position="2300,1900" size="100,100">You read the first page:
+[[Back-&gt;Living Room3]].</tw-passagedata><tw-passagedata pid="70" name="Book3" tags="book" position="2300,1900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;You read the first page:
 
 &quot;According to Scandanavian folklore, the huldra is a seductive forest creature. Literally &#39;hidden folk,&#39; these guardians of nature are often disguised in plain sight.
 
 &quot;Historically, when a human encroach on huldras&#39; territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings.
 
 &quot;Some even speculate that huldras will disguise nature itself in order to protect it from overdevelopment. Only the huldra and their possessed can see, well, the forest for the trees, as it were...&quot;
+
+At the bottom of the page, scralled in red letters are the words &quot;(colour: red)[(text-style: &quot;shudder&quot;)[COME FIND ME]]&quot;
 
 [[Back-&gt;Living Room3]].</tw-passagedata><tw-passagedata pid="71" name="Secret Passage3" tags="secretpassage2" position="2800,2400" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SECRET PASSAGE
 
@@ -780,8 +782,7 @@ Also, (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;Ace&amp;nbsp;&am
 
 Enter [[Ace&#39;s room-&gt;Ace&#39;s Room3]].
 Check out the [[sun room-&gt;Sun Room3]].
-Walk to the [[dining room-&gt;Dining Room3]].
-(link: &quot;Look down at your feet&quot;)[(set: $k3 to 1)(goto: &quot;Yourself&quot;)].</tw-passagedata><tw-passagedata pid="75" name="Sun Room3" tags="sunroom3" position="3100,2500" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SUN ROOM (&lt;a href=&quot;https://hangouts.google.com/call/9-UpLE5R-v1J-5JGFHzjACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
+Walk to the [[dining room-&gt;Dining Room3]].</tw-passagedata><tw-passagedata pid="75" name="Sun Room3" tags="sunroom3" position="3100,2500" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SUN ROOM (&lt;a href=&quot;https://hangouts.google.com/call/9-UpLE5R-v1J-5JGFHzjACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 This appears to be a triple-purpose space: it houses the washer and dryer, (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;Ace&#39;s&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;, &quot;Charlie&#39;s&quot;)] dank electronic music station, and the cats&#39; food and litterbox.
 

@@ -16,6 +16,11 @@
  background-size:cover;
 }
 
+tw-story[tags~="lafayetteavenue2"] {
+ background-image:url(https://github.com/waltacefur/DreamHouse/blob/master/Lafayette2.png?raw=true);
+ background-size:cover;
+}
+
 tw-story[tags~="frontporch"] {
  background-image:url(https://github.com/waltacefur/DreamHouse/blob/master/FrontPorch.jpg?raw=true);
  background-size:cover;
@@ -311,13 +316,13 @@ A single book sticks out past the edge of Sarah&#39;s bookshelf. [[Inspect it-&g
 
 Sarah sits at the desk playing Runescape. {(if: $toolshed is 0)[Talk to Sarah. (click-replace: &quot;Talk to Sarah.&quot;)[Sarah is engrossed in the game. Come back once she has finished smelting the hours- and hours-worth of iron and bronze she mined from the same rock next to a tree.]](if: $toolshed is 1)[(if: $sarah is 0)[(colour: red)[Talk to [[Sarah]]].](if: $sarah is 1)[Talk to [[Sarah]].]]}
 
-Exit to the back to [[hallway-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="8" name="Bathroom" tags="bathroom" position="900,1300" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BATHROOM
+Exit to the back to [[hallway-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="8" name="Bathroom" tags="bathroom" position="900,1300" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BATHROOM (&lt;a href=&quot;https://hangouts.google.com/call/3c40Rrlhmfw2zUX5EoBEACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 One wall is covered entirely by a mirror. The other has a sink above which hangs a picture of Talking Heads playing at CBGB. Potted plants rest on the edge of the bathtub. Ivies are suspended from above.
 
 Look at the [[picture-&gt;Picture]].
 Look in the [[mirror-&gt;Mirror]].
-Exit to the [[hallway-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="9" name="Dining Room" tags="diningroom" position="1100,900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd&quot;&gt;video chat&lt;/a&gt;)
+Exit to the [[hallway-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="9" name="Dining Room" tags="diningroom" position="1100,900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 
 
@@ -330,7 +335,7 @@ This is where the three residents of this house convene for meals and general to
 
 Someone has left a sketchbook on the table. Under the front cover is a message that reads, &quot;Please collaborte. Add a small amount to this drawing so that others have space to contribute too.&quot; &lt;a href=&quot;https://aggie.io/xssvnhnb5h&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;Draw in the sketch book&lt;/a&gt;.
 
-Venture into the [[kichen-&gt;Kitchen]].
+Venture into the [[kitchen-&gt;Kitchen]].
 Enter the [[hallway-&gt;Hallway]].
 Walk to [[living room-&gt;Living Room]].</tw-passagedata><tw-passagedata pid="10" name="Kitchen" tags="kitchen" position="1300,900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;KITCHEN (&lt;a href=&quot;https://hangouts.google.com/call/Fo_37xhH63-GarNvBBGxACEE?no_rd&quot;&gt;video chat&lt;/a&gt;)
 
@@ -403,6 +408,8 @@ Be kind to other partygoers and enjoy.
 	(set: $charlie to 0)
 	(set: $possessed to 0)
 	(set: $mirror to 0)
+	(set: $street to 0)
+	(set: $try to 0)
 	(set: $unpossessed to 0)
 }</tw-passagedata><tw-passagedata pid="17" name="Cats" tags="cats" position="1600,1400" size="100,100">CATS
 
@@ -412,7 +419,10 @@ Floorboard (&quot;Flobo&quot;) Flotsum Furman.
 
 Black cats are supposedly unlucky, but these cats are clearly tortoiseshell, so you relax a little. Still, they give off a distinct aura that you can&#39;t quite place.
 
-[[Back-&gt;Sun Room]].</tw-passagedata><tw-passagedata pid="18" name="Bookshelf" tags="bookshelf" position="800,800" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BOOKSHELF
+[[Back-&gt;Sun Room]].
+
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;^(click-replace: &quot;^&quot;)[*Hiss* &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;They don&#39;t seem to like you.]</tw-passagedata><tw-passagedata pid="18" name="Bookshelf" tags="bookshelf" position="800,800" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BOOKSHELF
 
 There appears to be two distinct genres of books here: mycology (study of fungi) and the occult. You see a book called &quot;The How And Why Wonder Book Of Mushrooms, Ferns, and Mosses,&quot; as well as two large tomes titled &quot;The Geography of Witchcraft&quot; and &quot;The History of Demonology.&quot;
 
@@ -424,7 +434,7 @@ One book looks particularly worn; you can&#39;t quite make out the title. [[Take
 
 &quot;According to Scandanavian folklore, the huldra is a seductive forest creature. Literally &#39;hidden folk,&#39; these guardians of nature often disguise themselves in plain sight.
 
-&quot;Historically, when a human encroaches on huldra territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings. Only uttering the huldra&#39;s true name can break the possession.
+&quot;Historically, when a human encroaches on huldra territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings. They are known to live along said their possessed subjects as companions or familiars. Only uttering the huldra&#39;s true name can break the possession.
 
 &quot;Some scholars even speculate that huldras will go so far as to disguise elements of nature itself in order to protect it from overdevelopment. Only the huldra and their possessed can see, well, the forest for the trees, as it were...&quot;
 
@@ -441,19 +451,19 @@ Open up Photobooth, or whatever webcam photo app you have on this decrepit machi
 [[Back-&gt;Hallway]].</tw-passagedata><tw-passagedata pid="23" name="Charlie" tags="" position="600,1200" size="100,100">(set: $charlie to 1)
 &lt;iframe width=&quot;853&quot; height=&quot;480&quot;  src=&quot;https://www.youtube.com/embed/mG-g2PNQBrQ?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-[[Continue-&gt;Charlie&#39;s Room]].</tw-passagedata><tw-passagedata pid="24" name="Secret Passage" tags="secretpassage" position="1200,1200" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SECRET PASSAGE
+(live: 7s)[[[Continue-&gt;Charlie&#39;s Room]].]</tw-passagedata><tw-passagedata pid="24" name="Secret Passage" tags="secretpassage" position="1200,1200" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SECRET PASSAGE
 
 You&#39;ve discovered the secret door behind Sarah&#39;s bookshelf! Let&#39;s see [[where it leads-&gt;Ace&#39;s Room]].
 
 (In case you were wondering, this truly exists in our house.)</tw-passagedata><tw-passagedata pid="25" name="Sarah" tags="" position="1000,1200" size="100,100">(set: $sarah to 1)
 &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/Bi5P0Bs6a_I?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-[[Continue-&gt;Sarah&#39;s Room]].</tw-passagedata><tw-passagedata pid="26" name="Ace" tags="" position="1500,1700" size="100,100">&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/2MzrN2xNkeA?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+(live: 7s)[[[Continue-&gt;Sarah&#39;s Room]].]</tw-passagedata><tw-passagedata pid="26" name="Ace" tags="" position="1500,1700" size="100,100">&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/2MzrN2xNkeA?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-[[Continue-&gt;Tool Shed]].
+(live: 7s)[[[Continue-&gt;Tool Shed]].]
 (set: $toolshed to 1)</tw-passagedata><tw-passagedata pid="27" name="Let In" tags="" position="400,800" size="100,100">&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/vZpuhVVfnCI?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-[[Come on in-&gt;Foyer]]!
+(live: 7s)[[[Come on in-&gt;Foyer]]!]
 (if: $foyer is 0)[(set: $foyer to 1)]</tw-passagedata><tw-passagedata pid="28" name="Turntable" tags="turntable" position="600,800" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;TURNTABLE
 
 You read a book once about how vinyl records have theraputic qualities that digital media lack. You feel therapized. So much so that you feel like the hosts wouldn&#39;t mind if you &lt;a href=&quot;https://app.jqbx.fm/room/turntable&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;put some music on yourself&lt;/a&gt;.
@@ -472,7 +482,7 @@ You feel your body is no longer your own. You percieve your senses but as if in 
 (set: $possessed to 1)
 Return to [[Ace&#39;s room-&gt;Ace&#39;s Room2]].</tw-passagedata><tw-passagedata pid="31" name="Possessed" tags="" position="1300,1300" size="100,100">&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/DSiPrYc4Dss?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-[[Continue-&gt;Attic2]].</tw-passagedata><tw-passagedata pid="32" name="Ace&#39;s Room2" tags="acesroom" position="2900,1100" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;ACE&#39;S ROOM
+(live: 7s)[[[Continue-&gt;Attic2]].]</tw-passagedata><tw-passagedata pid="32" name="Ace&#39;s Room2" tags="acesroom" position="2900,1100" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;ACE&#39;S ROOM
 
 Everything in this room smells of Björk, Twin Peaks, and Carl Sagan.
 
@@ -508,7 +518,7 @@ Pet the [[cats-&gt;Cats2]].
 There is also a small closet door. See [[where it leads-&gt;Larder2]].
 
 Go into the [[kitchen-&gt;Kitchen2]].
-Go out to the [[back porch-&gt;Back Porch2]].</tw-passagedata><tw-passagedata pid="36" name="Dining Room2" tags="diningroom2" position="2700,900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd&quot;&gt;video chat&lt;/a&gt;)
+Go out to the [[back porch-&gt;Back Porch2]].</tw-passagedata><tw-passagedata pid="36" name="Dining Room2" tags="diningroom2" position="2700,900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd target=&quot;new&quot; style=&quot;color:green&quot;&quot;&gt;video chat&lt;/a&gt;)
 
 
 
@@ -521,7 +531,7 @@ This is where the three residents of this house convene for meals and general to
 
 Someone has left a sketchbook on the table. Under the front cover is a message that reads, &quot;Please collaborte. Add a small amount to this drawing so that others have space to contribute too.&quot; &lt;a href=&quot;https://aggie.io/xssvnhnb5h&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;Draw in the sketch book&lt;/a&gt;.
 
-Venture into the [[kichen-&gt;Kitchen2]].
+Venture into the [[kitchen-&gt;Kitchen2]].
 Enter the [[hallway-&gt;Hallway2]].
 Walk to [[living room-&gt;Living Room2]].</tw-passagedata><tw-passagedata pid="37" name="Hallway2" tags="hallway" position="2500,1100" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;HALLWAY (&lt;a href=&quot;https://hangouts.google.com/call/u8nNR5sRrT-h9TexqWEFACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
@@ -551,7 +561,7 @@ Posters of Eastern European filmmakers hang on the wall. You notice that each la
 A single book sticks out past the edge of Sarah&#39;s bookshelf. [[Inspect it-&gt;Secret Passage2]].
 
 Sarah sits at the desk playing Runescape.
-Exit to the back to [[hallway-&gt;Hallway2]].</tw-passagedata><tw-passagedata pid="42" name="Bathroom2" tags="bathroom" position="2500,1300" size="100,100">BATHROOM
+Exit to the back to [[hallway-&gt;Hallway2]].</tw-passagedata><tw-passagedata pid="42" name="Bathroom2" tags="bathroom" position="2500,1300" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BATHROOM (&lt;a href=&quot;https://hangouts.google.com/call/3c40Rrlhmfw2zUX5EoBEACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 One wall is covered entirely by a mirror. The other has a sink above which hangs a picture of Talking Heads playing at CBGB. Potted plants rest on the edge of the bathtub. Ivies are suspended from above.
 
@@ -563,13 +573,12 @@ Exit to the [[hallway-&gt;Hallway2]].</tw-passagedata><tw-passagedata pid="43" n
 
 &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/ipTFIGqoYs0?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
+{(colour: red)[Oh shit! Maybe you should get the hell outta here.]}
 You see (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Ace&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;, &quot;yourself&quot;)]. Your own (live: 0.1s)[(either: &quot;&amp;nbsp;Ace&quot;, &quot;face&quot;)]. Damn, you&#39;re looking good. You decide to take a picture.
 
 Open up Photobooth, or whatever webcam photo app you have on this decrepit machine of yours and take a photo. Alternatively, thake a screenshot when you&#39;re talking to other guests, and share it here in this &lt;a href=&quot;https://docs.google.com/presentation/d/15zmfOkq89yXWAaRwrTLW7_9Oy-vrxJw59GLiIqp1evQ/edit?usp=sharing&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;photo album&lt;/a&gt;!
 
-{(colour: red)[Maybe you should try to figure out what is going on? Do your research?]}
-(set: $mirror to 1)
-[[Back-&gt;Bathroom2]].</tw-passagedata><tw-passagedata pid="45" name="Secret Passage2" tags="secretpassage2" position="2800,1200" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SECRET PASSAGE
+(set: $mirror to 1)[[Back-&gt;Bathroom2]].</tw-passagedata><tw-passagedata pid="45" name="Secret Passage2" tags="secretpassage2" position="2800,1200" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SECRET PASSAGE
 
 You&#39;ve discovered the secret door behind Sarah&#39;s bookshelf! Let&#39;s see [[where it leads-&gt;Ace&#39;s Room2]].
 
@@ -602,25 +611,27 @@ Exit to the [[front door-&gt;Front Porch2]].</tw-passagedata><tw-passagedata pid
 
 &quot;According to Scandanavian folklore, the huldra is a seductive forest creature. Literally &#39;hidden folk,&#39; these guardians of nature often disguise themselves in plain sight.
 
-&quot;Historically, when a human encroaches on huldra territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings. Only uttering the huldra&#39;s true name can break the possession.
+&quot;Historically, when a human encroaches on huldra territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings. They are known to live along said their possessed subjects as companions or familiars. Only uttering the huldra&#39;s true name can break the possession.
 
 &quot;Some scholars even speculate that huldras will go so far as to disguise elements of nature itself in order to protect it from overdevelopment. Only the huldra and their possessed can see, well, the forest for the trees, as it were...&quot;
 
-(if: $mirror is 1)[At the bottom of the page, scralled in red letters are the words &quot;(colour: red)[(text-style: &quot;shudder&quot;)[COME FIND ME]]&quot;
+(if: $street is 1)[At the bottom of the page, scralled in red letters are the words &quot;(colour: red)[(text-style: &quot;shudder&quot;)[COME FIND ME]]&quot;
 
 [[Back-&gt;Living Room3]].
 
-](if: $mirror is 0)[[[Back-&gt;Living Room2]].]</tw-passagedata><tw-passagedata pid="50" name="Front Porch2" tags="frontporch" position="1900,1000" size="100,100">FRONT PORCH (&lt;a href=&quot;https://hangouts.google.com/call/7spmzyjhf4zu1u-uDAh2ACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
+](if: $street is 0)[[[Back-&gt;Living Room2]].]</tw-passagedata><tw-passagedata pid="50" name="Front Porch2" tags="frontporch" position="1900,1000" size="100,100">FRONT PORCH (&lt;a href=&quot;https://hangouts.google.com/call/7spmzyjhf4zu1u-uDAh2ACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 A porch glider swings lightly in the breeze. Its metal chains creak quietly. The purple light from inside the house is so inviting.
 
 [[Go inside-&gt;Foyer2]].
 Go through the wooden gate to the [[back porch-&gt;Back Porch2]].
-Return to the [[street-&gt;Lafayette Avenue2]].</tw-passagedata><tw-passagedata pid="51" name="Lafayette Avenue2" tags="lafayetteavenue" position="1700,1000" size="100,100">LAFAYETTE AVENUE (&lt;a href=&quot;https://hangouts.google.com/call/xTh8DMQN7spJG3EQVeGZACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
+Return to the [[street-&gt;Lafayette Avenue2]].</tw-passagedata><tw-passagedata pid="51" name="Lafayette Avenue2" tags="lafayetteavenue2" position="1700,1000" size="100,100">LAFAYETTE AVENUE (&lt;a href=&quot;https://hangouts.google.com/call/xTh8DMQN7spJG3EQVeGZACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
-Ah, Austin&#39;s historic Cherrywood neighborhood. You see a house with a purple light in the window. That&#39;s curious.
+You walk to the street, but... its feels more like a bad mushroom trip. Is this house even a house? Are you even yourself? So many questions.
 
-Approach [[the house-&gt;Front Porch2]].
+(if: $mirror is 1)[(colour: red)[Maybe you should figure out what is going on. Do you research?
+(set: $street to 1)
+]]Approach [[the &quot;house&quot;-&gt;Front Porch2]].
 
 (If you are really ready to leave, you can [[walk into the distance-&gt;Outro]].)</tw-passagedata><tw-passagedata pid="52" name="Tool Shed2" tags="toolshed" position="2900,1700" size="100,100">TOOL SHED (&lt;a href=&quot;https://hangouts.google.com/call/NIlDbPBX3El3hxTzKzZIACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
@@ -636,7 +647,7 @@ You enter a tight, chilly pantry filled with bottles and jars of who-knows-what.
 
 You decide not to interact with this yet.
 
-Return to the [[sun room-&gt;Sun Room2]].</tw-passagedata><tw-passagedata pid="55" name="Bathroom3" tags="bathroom" position="2500,2500" size="100,100">BATHROOM
+Return to the [[sun room-&gt;Sun Room2]].</tw-passagedata><tw-passagedata pid="55" name="Bathroom3" tags="bathroom" position="2500,2500" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BATHROOM (&lt;a href=&quot;https://hangouts.google.com/call/3c40Rrlhmfw2zUX5EoBEACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 One wall is covered entirely by a mirror. The other has a sink above which hangs a picture of Talking Heads playing at CBGB. Potted plants rest on the edge of the bathtub. Ivies are suspended from above.
 
@@ -679,7 +690,7 @@ Posters of Eastern European filmmakers hang on the wall. You notice that each la
 A single book sticks out past the edge of (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;Ace&#39;s&amp;nbsp;&amp;nbsp;&quot;, &quot;Sarah&#39;s&quot;)] bookshelf. [[Inspect it-&gt;Secret Passage3]].
 
 (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;Ace&amp;nbsp;&amp;nbsp;&quot;, &quot;Sarah&quot;)] sits at the desk playing Runescape.
-Exit to the back to [[hallway-&gt;Hallway3]].</tw-passagedata><tw-passagedata pid="62" name="Dining Room3" tags="diningroom2" position="2700,2100" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd&quot;&gt;video chat&lt;/a&gt;)
+Exit to the back to [[hallway-&gt;Hallway3]].</tw-passagedata><tw-passagedata pid="62" name="Dining Room3" tags="diningroom2" position="2700,2100" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 
 
@@ -692,7 +703,7 @@ This is where the three residents of this house convene for meals and general to
 
 Someone has left a sketchbook on the table. Under the front cover is a message that reads, &quot;Please collaborte. Add a small amount to this drawing so that others have space to contribute too.&quot; &lt;a href=&quot;https://aggie.io/xssvnhnb5h&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;Draw in the sketch book&lt;/a&gt;.
 
-Venture into the [[kichen-&gt;Kitchen3]].
+Venture into the [[kitchen-&gt;Kitchen3]].
 Enter the [[hallway-&gt;Hallway3]].
 Walk to [[living room-&gt;Living Room3]].</tw-passagedata><tw-passagedata pid="63" name="Foyer3" tags="foyer2" position="2100,2200" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;FOYER
 
@@ -700,7 +711,7 @@ Most modern houses don&#39;t have foyers. Is this even a foyer? an atrium? a ant
 
 The purple light bathes your skin and you know its going to be a good party.
 
-On the entry stand sits a guestbook for Charlie, Emma, and Sarah. &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1cMJH8k4RaFvIRs7iKP2zN3zfY53rmfIHw48oIZb-2L4/edit?usp=sharing&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;Sign it&lt;/a&gt;.
+On the entry stand sits a guestbook for (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;Ace&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;, &quot;Charlie&quot;)], (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;Ace&amp;nbsp;&amp;nbsp;&quot;, &quot;Emma&quot;)], and (live: 0.1s)[(either: &quot;&amp;nbsp;&amp;nbsp;Ace&amp;nbsp;&amp;nbsp;&quot;, &quot;Sarah&quot;)]. &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1cMJH8k4RaFvIRs7iKP2zN3zfY53rmfIHw48oIZb-2L4/edit?usp=sharing&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;Sign it&lt;/a&gt;.
 
 You see two new doors:
 Enter the [[living room-&gt;Living Room3]].
@@ -730,9 +741,9 @@ You can also go through the gate to the [[front porch-&gt;Front Porch3]].
 
 Or, enter the house via [[Ace&#39;s room-&gt;Ace&#39;s Room3]] or the [[sun room-&gt;Sun Room3]].</tw-passagedata><tw-passagedata pid="67" name="Lafayette Avenue3" tags="lafayetteavenue" position="1700,2200" size="100,100">LAFAYETTE AVENUE (&lt;a href=&quot;https://hangouts.google.com/call/xTh8DMQN7spJG3EQVeGZACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
-Ah, Austin&#39;s historic Cherrywood neighborhood. You see a house with a purple light in the window. That&#39;s curious.
+You walk to the street, but... its feels more like a bad mushroom trip. Is this house even a house? Are you even yourself? So many questions.
 
-Approach [[the house-&gt;Front Porch3]].
+Approach [[the &quot;house&quot;-&gt;Front Porch3]].
 
 (If you are really ready to leave, you can [[walk into the distance-&gt;Outro]].)</tw-passagedata><tw-passagedata pid="68" name="Bookshelf3" tags="bookshelf" position="2400,2000" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BOOKSHELF
 
@@ -752,7 +763,7 @@ You read a book once about how vinyl records have theraputic qualities that digi
 
 &quot;According to Scandanavian folklore, the huldra is a seductive forest creature. Literally &#39;hidden folk,&#39; these guardians of nature are often disguised in plain sight.
 
-&quot;Historically, when a human encroach on huldras&#39; territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings.
+&quot;Historically, when a human encroach on huldras&#39; territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings. (if: $try is 0 or 1 or 2)[They are known to live along said their possessed subjects as companions or familiars](if: $try is 3)[(colour: red)[They are known to live along said their possessed subjects as companions or familiars]]. Only uttering the huldra&#39;s true name can break the possession.
 
 &quot;Some even speculate that huldras will disguise nature itself in order to protect it from overdevelopment. Only the huldra and their possessed can see, well, the forest for the trees, as it were...&quot;
 
@@ -802,21 +813,30 @@ This is a shed for tools. You were informed that if you want to do a dank jay, y
 
 Return to the back porch [[back porch-&gt;Back Porch3]].</tw-passagedata><tw-passagedata pid="78" name="Crawl Space3" tags="crawlspace" position="2500,2900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;CRAWL SPACE
 
-Loose floorboards are scattered around you. The floor of the larder fell from under you, and now a gaping hole lies open above you.
+(if: $unpossessed is 0)[Loose (if: $try is 0 or 1)[floorboards](if: $try is 2 or 3)[(colour: red)[floorboards]] are scattered around you. The floor of the larder fell from under you, and now a gaping hole lies open above you.
 
-You still feel possessed, and its still creepy af down here.
+You must have guessed incorrectly becuase you still feel possessed, (colour: red)[but now you know where to go to confront your demons]. Also, its still creepy af down here.](else:)[You are repossessed! But you already know how to become unpossessed. Is willing possession even possession at all? Or just an excuse to see multiple copies of Ace everywhere?
+
+Loose (if: $try is 0 or 1)[floorboards](if: $try is 2 or 3)[(colour: red)[floorboards]] are scattered around you. The floor of the larder fell from under you, and now a gaping hole lies open above you.
+
+Its still creepy af down here. (set: $unpossessed to 0)]
 
 [[Leave-&gt;Back Porch3]].</tw-passagedata><tw-passagedata pid="79" name="Forest" tags="forest" position="3300,2300" size="100,100">&lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/0G176NEFKpk?autoplay=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-[[Continue-&gt;Huldra]].</tw-passagedata><tw-passagedata pid="80" name="Huldra" tags="huldra" position="3300,2500" size="100,100">(set: $name to (prompt: &quot;The book said to unpossess yourself, you need to say the first name of the spirit. Say something to try to break the spell: &quot;, &quot;name&quot;))
-{(if: $name is &quot;Doorjamb&quot; or &quot;doorjamb&quot; or &quot;Floorboard&quot; or &quot;floorboard&quot;)[[[Continue-&gt;Crawl Space4]].](else:)[[[Continue-&gt;Crawl Space3]].]}</tw-passagedata><tw-passagedata pid="81" name="Crawl Space4" tags="crawlspace4" position="900,2900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;CRAWL SPACE
+(live: 7s)[[[Continue-&gt;Huldra]].]</tw-passagedata><tw-passagedata pid="80" name="Huldra" tags="huldra" position="3300,2500" size="100,100">(set: $name to (prompt: &quot;The book said to unpossess yourself, you need to say the first name of the spirit. Say something to try to break the spell: &quot;, &quot;name&quot;))
+{(if: $name is &quot;Doorjamb&quot; or &quot;doorjamb&quot; or &quot;Doge&quot; or &quot;doge&quot; or &quot;Floorboard&quot; or &quot;floorboard&quot; or &quot;Flobo&quot; or &quot;flobo&quot;)[[[Continue-&gt;Crawl Space4]].](else:)[[[Continue-&gt;Crawl Space3]].]}
+{(if: $try is 2)[set: $try to 3)](if: $try is 1)[set: $try to 2)](if: $try is 0)[(set: $try to 1)]}</tw-passagedata><tw-passagedata pid="81" name="Crawl Space4" tags="crawlspace4" position="900,2900" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;CRAWL SPACE
 
 (if: $unpossessed is 0)[Loose floorboards are scattered around you. The floor of the larder fell from under you, and now a gaping hole lies open above you.
 
 (colour: red)[Flobo and Doge are down here too. They look at you knowingly.
 You are unpossessed!] Somehow it feels less creepy down here now.
 
-[[Venture forth-&gt;Back Porch4]] with a renewed sense of self.](else:)[There&#39;s still a hole in the ceiling, and the cats are still just hanging out. Aren&#39;tcha glad you&#39;re not possessed anymore? Ask the cats if you can return to [[Ace-world-&gt;Crawl Space3]]. 
+If you feel nostalgic, ask the cats if they will [[repossess you-&gt;Crawl Space3]]. 
+
+[[Venture forth-&gt;Back Porch4]] with a renewed sense of self.(set: $unpossessed to 1)](else:)[There&#39;s still a hole in the ceiling, and the cats are still just hanging out. Aren&#39;tcha glad you&#39;re not possessed anymore?
+
+If you feel nostalgic, ask the cats if they will [[repossess you-&gt;Crawl Space3]]. 
 
 Climb up through the hole into the [[larder-&gt;Larder4]].
 Go to the [[back porch-&gt;Back Porch4]].]</tw-passagedata><tw-passagedata pid="82" name="Back Porch4" tags="backporch" position="1100,2900" size="100,100">BACK PORCH (&lt;a href=&quot;https://hangouts.google.com/call/tJ_VyOxKLpk-R_hAcfKCACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
@@ -829,8 +849,7 @@ By the side of the house, there is a small door. If you crouch you can just bare
 
 You can also go through the gate to the [[front porch-&gt;Front Porch4]].
 
-Or, enter the house via [[Ace&#39;s room-&gt;Ace&#39;s Room4]] or the [[sun room-&gt;Sun Room4]].
-(set: $unpossessed to 1)</tw-passagedata><tw-passagedata pid="83" name="Tool Shed4" tags="toolshed" position="1300,2900" size="100,100">TOOL SHED (&lt;a href=&quot;https://hangouts.google.com/call/NIlDbPBX3El3hxTzKzZIACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
+Or, enter the house via [[Ace&#39;s room-&gt;Ace&#39;s Room4]] or the [[sun room-&gt;Sun Room4]].</tw-passagedata><tw-passagedata pid="83" name="Tool Shed4" tags="toolshed" position="1300,2900" size="100,100">TOOL SHED (&lt;a href=&quot;https://hangouts.google.com/call/NIlDbPBX3El3hxTzKzZIACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 This is a shed for tools. You were informed that if you want to do a dank jay, you gotta light up in here.
 
@@ -871,7 +890,7 @@ Also, Emma is here, putting tahini on an endless list of food items. Talk to Emm
 
 Enter [[Ace&#39;s room-&gt;Ace&#39;s Room4]].
 Check out the [[sun room-&gt;Sun Room4]].
-Walk to the [[dining room-&gt;Dining Room4]].</tw-passagedata><tw-passagedata pid="89" name="Dining Room4" tags="diningroom4" position="1100,2100" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd&quot;&gt;video chat&lt;/a&gt;)
+Walk to the [[dining room-&gt;Dining Room4]].</tw-passagedata><tw-passagedata pid="89" name="Dining Room4" tags="diningroom4" position="1100,2100" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;DINING ROOM (&lt;a href=&quot;https://hangouts.google.com/call/bytaznTkP6rV3aKXOZ__ACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 This is where the three residents of this house convene for meals and general tomfoolery.
 
@@ -882,7 +901,7 @@ Someone has left a sketchbook on the table. Under the front cover is a message t
 
 
 
-Venture into the [[kichen-&gt;Kitchen4]].
+Venture into the [[kitchen-&gt;Kitchen4]].
 Enter the [[hallway-&gt;Hallway4]].
 Walk to [[living room-&gt;Living Room4]].</tw-passagedata><tw-passagedata pid="90" name="Attic4" tags="attic4" position="1300,2500" size="100,100">ATTIC
 
@@ -917,7 +936,7 @@ A single book sticks out past the edge of Sarah&#39;s bookshelf. [[Inspect it-&g
 
 Sarah sits at the desk playing Runescape.
 
-Exit to the back to [[hallway-&gt;Hallway4]].</tw-passagedata><tw-passagedata pid="96" name="Bathroom4" tags="bathroom" position="900,2500" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BATHROOM
+Exit to the back to [[hallway-&gt;Hallway4]].</tw-passagedata><tw-passagedata pid="96" name="Bathroom4" tags="bathroom" position="900,2500" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;BATHROOM (&lt;a href=&quot;https://hangouts.google.com/call/3c40Rrlhmfw2zUX5EoBEACEE?no_rd&quot; target=&quot;new&quot; style=&quot;color:green&quot;&gt;video chat&lt;/a&gt;)
 
 One wall is covered entirely by a mirror. The other has a sink above which hangs a picture of Talking Heads playing at CBGB. Potted plants rest on the edge of the bathtub. Ivies are suspended from above.
 
@@ -925,7 +944,7 @@ Look at the [[picture-&gt;Picture4]].
 Look in the [[mirror-&gt;Mirror4]].
 Exit to the [[hallway-&gt;Hallway4]].</tw-passagedata><tw-passagedata pid="97" name="Secret Passage4" tags="secretpassage" position="1200,2400" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;SECRET PASSAGE
 
-You&#39;ve discovered the secret door behind Sarah&#39;s bookshelf! Let&#39;s see [[where it leads-&gt;Ace&#39;s Room3]].
+You&#39;ve discovered the secret door behind Sarah&#39;s bookshelf! Let&#39;s see [[where it leads-&gt;Ace&#39;s Room4]].
 
 (In case you were wondering, this truly exists in our house.)</tw-passagedata><tw-passagedata pid="98" name="Picture4" tags="picture" position="800,2600" size="100,100">&lt;span style=&quot;background-color:#000000&quot;&gt;All the the residents here love Talking Heads, so this starts making sense.
 
@@ -964,7 +983,7 @@ You read a book once about how vinyl records have theraputic qualities that digi
 
 &quot;According to Scandanavian folklore, the huldra is a seductive forest creature. Literally &#39;hidden folk,&#39; these guardians of nature often disguise themselves in plain sight.
 
-&quot;Historically, when a human encroaches on huldra territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings. Only uttering the huldra&#39;s true first name can break the possession.
+&quot;Historically, when a human encroaches on huldra territory, they will possess the human&#39;s body and integrate it seamlessly into the natural surroundings. They are known to live along said their possessed subjects as companions or familiars. Only uttering the huldra&#39;s true first name can break the possession.
 
 &quot;Some scholars even speculate that huldras will go so far as to disguise elements of nature itself in order to protect it from overdevelopment. Only the huldra and their possessed can see, well, the forest for the trees, as it were...&quot;
 
@@ -993,7 +1012,21 @@ Floorboard (&quot;Flobo&quot;) Flotsum Furman.
 
 Black cats are supposedly unlucky, but these cats are clearly tortoiseshell, so you relax a little. Still, they give off a distinct aura that you can&#39;t quite place.
 
-[[Back-&gt;Sun Room2]].</tw-passagedata><tw-passagedata pid="107" name="Cats3" tags="cats" position="3200,2600" size="100,100">CATS
+[[Back-&gt;Sun Room2]].
+
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;^(click-replace: &quot;^&quot;)[*Purr* &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;They have suddenly warmed up to you.]</tw-passagedata><tw-passagedata pid="107" name="Cats3" tags="cats" position="3200,2600" size="100,100">CATS
+
+Meet:
+Doorjamb (&quot;Doge&quot;) Ghostdog Furman , and
+Floorboard (&quot;Flobo&quot;) Flotsam Furman.
+
+Black cats are supposedly unlucky, but these cats are clearly tortoiseshell, so you relax a little. Still, they give off a distinct aura that you can&#39;t quite place.
+
+[[Back-&gt;Sun Room3]].
+
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;^(click-replace: &quot;^&quot;)[*Purr* &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;They have suddenly warmed up to you.]</tw-passagedata><tw-passagedata pid="108" name="Cats4" tags="cats" position="1600,2600" size="100,100">CATS
 
 Meet:
 Doorjamb (&quot;Doge&quot;) Ghostdog Furman , and
@@ -1001,15 +1034,10 @@ Floorboard (&quot;Flobo&quot;) Flotsum Furman.
 
 Black cats are supposedly unlucky, but these cats are clearly tortoiseshell, so you relax a little. Still, they give off a distinct aura that you can&#39;t quite place.
 
-[[Back-&gt;Sun Room3]].</tw-passagedata><tw-passagedata pid="108" name="Cats4" tags="cats" position="1600,2600" size="100,100">CATS
+[[Back-&gt;Sun Room4]].
 
-Meet:
-Doorjamb (&quot;Doge&quot;) Ghostdog Furman , and
-Floorboard (&quot;Flobo&quot;) Flotsum Furman.
 
-Black cats are supposedly unlucky, but these cats are clearly tortoiseshell, so you relax a little. Still, they give off a distinct aura that you can&#39;t quite place.
-
-[[Back-&gt;Sun Room4]].</tw-passagedata></tw-storydata>
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;^(click-replace: &quot;^&quot;)[*Purr* &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;They have suddenly warmed up to you.]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
